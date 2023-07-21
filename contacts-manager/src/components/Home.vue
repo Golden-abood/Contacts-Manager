@@ -4,7 +4,7 @@
       <div class="flex pt-[30px] items-center gap-x-5 pb-6">
         <h2 class="text-primary text-3xl font-bold">Contact Manager</h2>
         <div
-          class="flex bg-primary text-white gap-x-2 py-1 px-2 rounded-md mt-2"
+          class="flex cursor-pointer bg-primary text-white gap-x-2 py-1 px-2 rounded-md mt-2"
         >
           <i class="ri-add-circle-line"></i>
           <a>New</a>
@@ -29,13 +29,13 @@
     </div>
 
     <div class="users">
-        <UserBox />
+      <UsersBoxs />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import UserBox from './userBox.vue'
+import UsersBoxs from "./UsersBoxs.vue";
 </script>
 
 <style scoped></style>

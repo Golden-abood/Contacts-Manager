@@ -4,8 +4,10 @@ import Home from "./components/Home.vue";
 </script>
 
 <template>
-  <Nav />
-  <Home />  
+  <div>
+    <Nav />
+    <Home />
+  </div>
 </template>
 
 <style scoped>
