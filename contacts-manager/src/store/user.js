@@ -22,8 +22,9 @@ export const useUserStore = defineStore("user", () => {
     },
   ]);
   // {{ CRUD }} {{D}}
+  let conf = document.querySelector("#delete-user");
+  console.log(conf);
   const deleteUser = (index) => {
-    let conf = confirm("Are you sure you want to delete " + index + 1);
     if (conf) {
       users.value.splice(index, 1);
     }
@@ -34,10 +35,24 @@ export const useUserStore = defineStore("user", () => {
     let nameTask = prompt("update task", user.name);
     user.name = nameTask;
   };
+  // inputs
 
   // {{ CRUD }} {{C}}
   const CreateUser = () => {
-    
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let name = document.getElementById("name").value;
+    let bt = document.getElementById("bt");
+    console.log(email);
+    console.log(name);
+    console.log(phone);
+    let user = {
+      name: name,
+      email: email,
+      phone: phone,
+    };
+    users.value.push(user);
+    bt.setAttribute("data-modal-hide", "authentication-modal");
   };
   return {
     users,

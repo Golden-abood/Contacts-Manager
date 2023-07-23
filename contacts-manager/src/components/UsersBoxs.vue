@@ -9,6 +9,7 @@
         v-for="(user, index) in users"
         :key="index"
       />
+      
     </div>
   </div>
 </template>
@@ -17,6 +18,7 @@
 import userBox from "./userBox.vue";
 import { useUserStore } from "../store/user";
 import { storeToRefs } from "pinia";
+
 const userStore = useUserStore();
 const { users } = storeToRefs(userStore);
 </script>
